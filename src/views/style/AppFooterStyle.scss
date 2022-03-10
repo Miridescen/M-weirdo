@@ -1,0 +1,38 @@
+.app-footer {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    background-color: #d0d0d0;
+    flex-direction: column;
+    align-items: center;
+    background: {
+        image: url('../../assets/icons/footer-bg.png');
+        size: 100% 100%;
+        repeat: no-repeat;
+    }
+    .footer-logo {
+        width: 128px;
+        height: 202px;
+        margin-top: 10px;
+    }
+    .copyright {
+        margin-top: 34px;
+        font-family: Gadugi;
+        font-weight: 400;
+        color: #000000;
+    }
+}
+@media (max-width: 768px) {
+    .app-footer {
+        height: auto;
+        p{
+            font-size: 13px;
+        }
+        .footer-logo {
+            width: calc(128px * 0.8);
+            height: calc(202px * 0.8);
+        }
+        .copyright {
+        }
+    }
+}

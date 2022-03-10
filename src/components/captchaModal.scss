@@ -1,0 +1,134 @@
+@import '../style.scss';
+
+.captcha-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    z-index: 10;
+    .modal-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 580px;
+        height: 613px;
+        @include imgbg('assets/icons/modal_bg.png');
+        .close-icon {
+            display: inline-block;
+            position: absolute;
+            top: 17px;
+            right: 14px;
+            width: 23px;
+            height: 25px;
+            @include imgbg('assets/icons/close_btn.png');
+        }
+
+        .word-pic {
+            width: 510px;
+            height: 285px;
+        }
+        .topic-pic {
+            width: 285px;
+            height: 90px;
+        }
+        .input-box {
+            display: flex;
+            justify-content: space-between;
+        }
+        .input-style {
+            width: 0;
+            height: 0;
+            border: none;
+            outline: none;
+        }
+
+        .item-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 61px;
+            height: 61px;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            margin: 0 7px;
+            font-size: 2em;
+            font-family: Cabin Sketch;
+            font-weight: 530;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1.5em;
+            cursor: text;
+            .cursor-line {
+                width: 2px;
+                height: 70%;
+                background-color: #000000;
+                animation: cursor-blinks 1.5s infinite steps(1, start);
+            }
+            @keyframes cursor-blinks {
+                0% {
+                    opacity: 1;
+                    display: block;
+                }
+                50% {
+                    opacity: 0;
+                    display: none;
+                }
+                100% {
+                    opacity: 1;
+                    display: block;
+                }
+            }
+        }
+        .buy {
+            display: flex;
+            max-width: 335px;
+            margin-top: 37px;
+            height: 75px;
+            padding: 5px 137px;
+            border-radius: 50px;
+            font-family: Cabin Sketch;
+            font-weight: bold;
+            color: #ffffff;
+            background: linear-gradient(90deg, #3e0854, #1977f5);
+            .MuiButton-label {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                line-height: 28px;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .captcha-modal {
+        .modal-container {
+            width: 89.3vw;
+            height: 103.6vw;
+            .word-pic {
+                width: 78.2vw;
+                height: 43.2vw;
+            }
+            .topic-pic {
+                width: 36.7vw;
+                height: 11.2vw;
+            }
+            .input-style {
+                width: 9.5vw;
+                height: 9.5vw;
+            }
+            .buy {
+                display: flex;
+                width: 64.4vw;
+                height: 12.1vw;
+                border-radius: 6vw;
+            }
+        }
+    }
+}

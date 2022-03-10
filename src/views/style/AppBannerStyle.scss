@@ -1,0 +1,190 @@
+@import '../../style.scss';
+.banner-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 828px;
+    // height: 100vh;
+    margin: 0 auto;
+    // padding: 97px 0 20px;
+
+    @include imgbg('assets/icons/banner-bg.png');
+    background-size: 1920px auto;
+
+    //banner文字内容
+    .content {
+        width: 42%;
+        display: flex;
+        // align-items: flex-end;
+        // flex-direction: column;
+        transform: translate(-40%);
+        margin-top: 231px;
+        // margin-top: 76px;
+
+        .set-left {
+            // width: 775px;
+
+            //banner标题
+            .welcome {
+                width: 72%;
+                text-align: start;
+            }
+            //总数文字
+            .info-content {
+                // width: 594px;
+                display: flex;
+                justify-content: flex-start;
+                margin-top: 22px;
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                .info:nth-child(1) {
+                    margin-right: 83px;
+                }
+            }
+            //数量选择
+            .radio-box {
+                display: flex;
+                justify-content: flex-start;
+                margin-top: 48px;
+                // max-width: 78%;
+                // min-width: 772px;
+            }
+            .selected-default {
+                height: 102px;
+                margin-right: 5px;
+            }
+            .selected-one {
+                margin-right: 30px;
+                width: 240px;
+                @include imgbg('assets/icons/selected-one.png');
+            }
+            .selected-two {
+                margin-right: 30px;
+                width: 240px;
+                @include imgbg('assets/icons/selected-two.png');
+            }
+            .selected-three {
+                margin-right: 30px;
+                width: 235px;
+                @include imgbg('assets/icons/selected-three.png');
+            }
+            .unselected-one {
+                margin-right: 30px;
+                width: 240px;
+                @include imgbg('assets/icons/unselected-one.png');
+            }
+            .unselected-two {
+                margin-right: 30px;
+                width: 240px;
+                @include imgbg('assets/icons/unselected-two.png');
+            }
+            .unselected-three {
+                margin-right: 30px;
+                width: 235px;
+                @include imgbg('assets/icons/unselected-three.png');
+            }
+            //购买按钮
+            .buy {
+                //display: flex;
+                cursor: pointer;
+                max-width: 335px;
+                margin-top: 37px;
+                height: 75px;
+                //padding: 5px 137px;
+                border-radius: 50px;
+                font-family: Cabin Sketch;
+                font-weight: bold;
+                color: #ffffff;
+                line-height: 75px;
+                background: linear-gradient(90deg, #3e0854, #1977f5);
+                font-size: 27px;
+                width: 335px;
+                text-align: center;
+                .MuiButton-label {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1920px) {
+    .banner-content {
+        background-size: cover !important;
+    }
+}
+@media (max-width: 1600px) {
+    .banner-content {
+        .content {
+            width: 70%;
+            transform: translate(-10%);
+        }
+    }
+}
+@media (max-width: 1400px) {
+    .banner-content {
+        .content {
+            width: 80%;
+        }
+    }
+}
+@media (max-width: 1280px) {
+    .banner-content {
+        .content {
+            width: 90%;
+            transform: translate(0%);
+            .set-left {
+                .welcome {
+                    width: auto;
+                    text-align: start;
+                }
+                .info-content {
+                    .info:nth-child(1) {
+                        margin-right: 22px;
+                    }
+                }
+            }
+
+            // .set-left {
+            //     width: 100%;
+            // }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .banner-content {
+        height: auto;
+
+        .content {
+            width: 100%;
+            transform: translate(0);
+            .set-left {
+                width: 90%;
+                margin: 0 auto;
+                .selected-default {
+                    width: 180px;
+                    min-height: 42px;
+                    margin-right: 5px;
+                }
+                .selected-three {
+                    width: 235px;
+                }
+                .unselected-three {
+                    width: 235px;
+                }
+                .buy {
+                    //display: flex;
+                    margin-top: 37px;
+                    font-size: 27px;
+                    width: 335px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,183 @@
+.app-team {
+    .team-title {
+        height: 50px;
+        width: 390px;
+        margin: 0 auto;
+        margin-top: 107px;
+        margin-bottom: 65px;
+        background: {
+            image: url('../../assets/icons/TEAM.png');
+            size: 100%;
+            repeat: no-repeat;
+        }
+    }
+    .team-content {
+        display: flex;
+        justify-content: center;
+        margin-top: 86px;
+        margin-bottom: 140px;
+        .left {
+            //margin-right: 53px;
+            width: 503px;
+            height: 248px;
+            background: {
+                image: url('../../assets/icons/team-left.png');
+                size: 100%;
+                repeat: no-repeat;
+            }
+        }
+        .right {
+            width: 503px;
+            height: 248px;
+            background: {
+                image: url('../../assets/icons/team-right.png');
+                size: 100%;
+                repeat: no-repeat;
+            }
+        }
+    }
+    .partner-title {
+        height: 50px;
+        width: 639px;
+        margin: 0 auto;
+        margin-top: 107px;
+        margin-bottom: 65px;
+        background: {
+            image: url('../../assets/icons/PARTNERSHIP.png');
+            size: 100%;
+            repeat: no-repeat;
+        }
+        .team-content {
+            display: flex;
+            justify-content: center;
+            margin-top: 86px;
+            .left {
+                margin-right: 53px;
+                width: 503px;
+                height: 248px;
+                background: {
+                    image: url('../../assets/icons/team-left.png');
+                    size: 100%;
+                    repeat: no-repeat;
+                }
+            }
+            .right {
+                width: 503px;
+                height: 248px;
+                background: {
+                    image: url('../../assets/icons/team-right.png');
+                    size: 100%;
+                    repeat: no-repeat;
+                }
+            }
+        }
+        .partner-title {
+            height: 50px;
+            width: 639px;
+            margin: 0 auto;
+            margin-top: 107px;
+            margin-bottom: 65px;
+            background: {
+                image: url('../../assets/icons/PARTNERSHIP.png');
+                size: 100%;
+                repeat: no-repeat;
+            }
+        }
+        .partner-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 98px;
+            margin-bottom: 116px;
+            align-items: center;
+            .partner-one {
+                width: 252px;
+                height: 60px;
+                background: {
+                    image: url('../../assets/icons/partner-opensea.png');
+                    size: 100%;
+                    repeat: no-repeat;
+                }
+            }
+            .partner-two {
+                width: 310px;
+                height: 85px;
+                background: {
+                    image: url('../../assets/icons/partner-eth.png');
+                    size: 100%;
+                    repeat: no-repeat;
+                }
+            }
+            .partner-three {
+                width: 309px;
+                height: 49px;
+                background: {
+                    image: url('../../assets/icons/partner-openzeppelin.png');
+                    size: 100%;
+                    repeat: no-repeat;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .app-team {
+            width: 100%;
+            padding-bottom: 20px;
+
+            .team-title {
+                width: 195px;
+                height: 25px;
+                margin-top: 10px;
+                margin-bottom: 30px;
+            }
+
+            .team-content {
+                width: 100%;
+
+                margin-top: 0;
+
+                .left {
+                    width: calc(251px * 0.8);
+                    height: calc(124px * 0.8);
+                    margin-right: 0;
+                }
+
+                .right {
+                    width: calc(251px * 0.8);
+                    height: calc(124px * 0.8);
+                }
+            }
+
+            .partner-title {
+                width: 320px;
+                height: 25px;
+                margin: 0 auto;
+                margin-top: 10px;
+                margin-bottom: 30px;
+            }
+
+            .partner-content {
+                margin-top: 30px;
+                margin-bottom: 0;
+                .partner-one {
+                    width: calc(252px * 0.8);
+                    height: calc(60px * 0.8);
+                    margin: 20px 0;
+                }
+
+                .partner-two {
+                    width: calc(310px * 0.8);
+                    height: calc(85px * 0.8);
+                    margin: 20px 0;
+                }
+
+                .partner-three {
+                    width: calc(309px * 0.8);
+                    height: calc(49px * 0.8);
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+}

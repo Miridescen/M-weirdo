@@ -1,0 +1,7 @@
+@mixin imgbg($src) {
+    background: {
+        image: url($src);
+        size: 100% auto;
+        repeat: no-repeat;
+    }
+}

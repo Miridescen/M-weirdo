@@ -1,0 +1,66 @@
+.loop-swiper {
+    @mixin imgbg($src) {
+        background: {
+            image: url($src);
+            size: 100% auto;
+            repeat: no-repeat;
+        }
+    }
+    overflow: hidden;
+    .work-title {
+        width: 467px;
+        height: 53px;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 65px;
+        @include imgbg('../../assets/icons/work_title.png');
+    }
+    .loop-part {
+        // display: flex;
+        // justify-content: space-around;
+        width: 13750px;
+        // transform: translate(var(--screen-width));
+        animation: move 60s linear infinite;
+
+        img {
+            width: 225px;
+            height: 225px;
+            margin-right: 50px;
+            border-radius: 50px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .loop-swiper {
+        overflow: hidden;
+        .work-title {
+            width: 233.5px;
+            height: 26.5px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        .loop-part {
+            display: block;
+            width: 13750px;
+
+            img {
+                width: 225px;
+                height: 225px;
+                margin-right: 50px;
+                border-radius: 50px;
+            }
+        }
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(var(--screen-width));
+    }
+}

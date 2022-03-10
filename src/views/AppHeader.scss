@@ -1,0 +1,113 @@
+.app-head {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    height: 98px;
+    background: rgba(0, 0, 0, 0.8);
+}
+.head-content {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    padding: 0 138px;
+    .header-left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        width: 251px;
+        // height: 92px;
+    }
+    .tab-list {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+        .name {
+            margin: 0 60px;
+            font-family: Cabin Sketch;
+            font-weight: 400;
+            color: #225bcc;
+            cursor: pointer;
+            min-width: 75px;
+            text-align: center;
+            user-select: none;
+        }
+
+        .name-underline {
+            color: #ffffff;
+        }
+        .name-underline::after {
+            content: '';
+            width: 74px;
+            height: 3px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 5px;
+            border-radius: 1px;
+            background-color: #225bcc;
+        }
+    }
+}
+// @media (max-width: 1920px) {
+//     .app-head {
+//         .head-content {
+//             .tab-list {
+//                 .name {
+//                     margin: 0 40px;
+//                 }
+//             }
+//         }
+//     }
+// }
+@media (max-width: 1600px) {
+    .app-head {
+        height: 98px;
+        .head-content {
+            padding: 0 20px 0 20px;
+
+            .tab-list {
+                .name {
+                    margin: 0 20px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1400px) {
+    .app-head {
+        height: 98px;
+        .head-content {
+            .tab-list {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .app-head {
+        height: auto;
+        .head-content {
+            grid-template-columns: 15.5% auto;
+
+            // .tab-list {
+            //     display: none;
+            // }
+            .logo {
+                width: 151px;
+                // height: 92px;
+            }
+            .link-list {
+                display: none;
+            }
+        }
+    }
+}
